@@ -1,0 +1,35 @@
+# Auto-generated West manifest
+# Generated at: 2025-06-08T08:40:30.509574
+# Configuration: Custom selection
+
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp_zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  group-filter:
+  - -optional
+  - -bifrost
+  - -ble_cs_algo_private
+  - -bluetooth_private
+  self:
+    path: manifests
+    west-commands: scripts/west_commands.yml
+  projects:
+  - name: mcuxsdk-manifests
+    remote: nxp-mcuxpresso
+    revision: main
+    import:
+    - submanifests/base.yml
+    - submanifests/devices/MCX.yml
+    - submanifests/middleware/boot.yml
+    - submanifests/middleware/filesystem.yml
+    - submanifests/middleware/multicore.yml
+    - submanifests/middleware/others.yml
+    - submanifests/rtos/rtos.yml
+    - submanifests/internal.yml
